@@ -19,8 +19,17 @@ while cap.isOpened():
     frame_height, frame_width, _ = frame.shape
 
     if landmarks.multi_hand_landmarks:
+        finger_positions = []
         for hand_landmarks in landmarks.multi_hand_landmarks:
+            index_finger_tip = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
+            x, y = int(index_finger_tip.x * frame_width), int(index_finger_tip.y * frame_height)
+
+            finger_positions.append((x, y))
+
             mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+        
+        if len(finger_positions) == 2:
+            cv2.line(frame, finger_positions[0], finger_positions[1], (0, 255, 0), 5)
 
     cv2.imshow('vid', frame)
     

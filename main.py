@@ -6,6 +6,13 @@ mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.6, min_tracking_confidence=0.6)
 mp_draw = mp.solutions.drawing_utils
 
+ball_x = 16
+ball_y = 16
+ball_vel = np.array([5, 5], dtype=np.float64)
+ball_radius = 15
+ball_min_speed = 2.0 
+score = 0
+
 cap = cv2.VideoCapture(0)
 
 while cap.isOpened():
@@ -31,6 +38,16 @@ while cap.isOpened():
         if len(finger_positions) == 2:
             cv2.line(frame, finger_positions[0], finger_positions[1], (0, 255, 0), 5)
 
+    ball_x += ball_vel[0]
+    ball_y += ball_vel[1]
+
+    if ball_x - ball_radius <= 0 or ball_x + ball_radius >= frame_width: 
+        ball_vel[0] *= -1
+    if ball_y - ball_radius <= 0 or ball_y + ball_radius >= frame_height:
+        ball_vel[1] *= -1
+
+    cv2.circle(frame, (int(ball_x), int(ball_y)), ball_radius, (0, 0, 255), -1)
+    
     cv2.imshow('vid', frame)
     
     if cv2.waitKey(1) & 0xFF == ord('q'):

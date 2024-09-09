@@ -11,6 +11,7 @@ The score increments every time the ball collides with the line.
 1. Clone the repository:
 ```
 git clone https://github.com/1adore1/line_bounce_game.git
+cd line_bounce_game
 ```
 2. Install the required dependencies:
 ```

@@ -16,7 +16,7 @@ cd line-bounce-game
 ```
 2. Install the required dependencies:
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ### How To Run

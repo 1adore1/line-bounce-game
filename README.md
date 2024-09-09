@@ -2,10 +2,7 @@
 
 ### Overview
 
-The Line Bounce project is a computer vision game built using Python, OpenCV, and MediaPipe.
-The game involves bouncing a ball off a line drawn between two index fingers tracked via webcam.
-The ball moves in real-time, and the player uses their fingers to control the line, trying to hit the ball to keep it bouncing.
-The score increments every time the ball collides with the line.
+This project demonstrates a simple hand-tracking game where ball is bouncing off the line drawn between two index fingers.
 
 ### Installation
 1. Clone the repository:

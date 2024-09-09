@@ -5,7 +5,7 @@ import numpy as np
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.6, min_tracking_confidence=0.6)
 mp_draw = mp.solutions.drawing_utils
-
+ 
 ball_x = 16
 ball_y = 16
 ball_vel = np.array([5, 5], dtype=np.float64)

@@ -26,5 +26,5 @@ python main.py
 
 * When launched, ball will randomly fall from the top of the screen and will bounce off the walls.
 * Your score increases each time a ball touches the line between your hands.
-* The game ends when you press the 'q' key to quit.
+* The game ends when you press the ```q``` key to quit.
 ---

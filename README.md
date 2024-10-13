@@ -1,6 +1,5 @@
-![](https://github.com/1adore1/line-bounce-game/blob/main/gif.gif)
 # Line Bounce Game
-
+![](https://github.com/1adore1/line-bounce-game/blob/main/gif.gif)
 ### Overview
 
 This project demonstrates a simple hand-tracking game where ball is bouncing off the line drawn between two index fingers.

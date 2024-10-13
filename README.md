@@ -1,3 +1,4 @@
+![](https://github.com/1adore1/line-bounce-game/blob/main/gif.gif)
 # Line Bounce Game
 
 ### Overview
